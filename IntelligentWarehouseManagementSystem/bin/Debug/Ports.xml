@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GBK"?>
+<Root>
+	<DB>
+		<ISO15693>COM102</ISO15693>
+		<LED>COM1</LED>
+	</DB>
+</Root>

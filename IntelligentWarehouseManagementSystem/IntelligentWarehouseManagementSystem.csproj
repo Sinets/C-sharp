@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DA2ED7E-E1F0-40EC-8B0C-4BCBDB45E9EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntelligentWarehouseManagementSystem</RootNamespace>
+    <AssemblyName>IntelligentWarehouseManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="KV_ISO15693">
+      <HintPath>.\KV_ISO15693.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WSN_New_DLL">
+      <HintPath>.\WSN_New_DLL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MerchandiseOutOfTheLibraryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MerchandiseOutOfTheLibraryForm.Designer.cs">
+      <DependentUpon>MerchandiseOutOfTheLibraryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerchandiseRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MerchandiseRegistrationForm.Designer.cs">
+      <DependentUpon>MerchandiseRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerchandiseWarehousingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MerchandiseWarehousingForm.Designer.cs">
+      <DependentUpon>MerchandiseWarehousingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyClass\Cargo.cs" />
+    <Compile Include="MyClass\ClassAll.cs" />
+    <Compile Include="MyClass\Register.cs" />
+    <Compile Include="ProductMonitoringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductMonitoringForm.Designer.cs">
+      <DependentUpon>ProductMonitoringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemperatureAndHumidityMonitoringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemperatureAndHumidityMonitoringForm.Designer.cs">
+      <DependentUpon>TemperatureAndHumidityMonitoringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCWarehouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCWarehouse.Designer.cs">
+      <DependentUpon>UCWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseSettingsForm.Designer.cs">
+      <DependentUpon>WarehouseSettingsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MerchandiseOutOfTheLibraryForm.resx">
+      <DependentUpon>MerchandiseOutOfTheLibraryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerchandiseRegistrationForm.resx">
+      <DependentUpon>MerchandiseRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerchandiseWarehousingForm.resx">
+      <DependentUpon>MerchandiseWarehousingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductMonitoringForm.resx">
+      <DependentUpon>ProductMonitoringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TemperatureAndHumidityMonitoringForm.resx">
+      <DependentUpon>TemperatureAndHumidityMonitoringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCWarehouse.resx">
+      <DependentUpon>UCWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseSettingsForm.resx">
+      <DependentUpon>WarehouseSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
